@@ -1,0 +1,62 @@
+/* Basic page layout */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fafafa;
+}
+
+/* Container for all entities (celebrities or bands) */
+.entity-card {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+}
+
+.entity-card h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+/* Labels like "Solo artist" or "K‑pop band" */
+.entity-card .label {
+  font-size: 0.9em;
+  color: #666;
+  display: block;
+  margin-bottom: 0.75rem;
+}
+
+/* Images for a single person or band */
+.entity-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 0.5rem 0;
+}
+
+/* Band members layout (multiple images in a row) */
+.entity-card .band-members {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.entity-card .band-members img {
+  max-width: 120px;
+  border-radius: 8px;
+}
+
+/* Links: performance and music */
+.entity-card a {
+  color: #0055aa;
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
+.entity-card a:hover {
+  text-decoration: underline;
+}
