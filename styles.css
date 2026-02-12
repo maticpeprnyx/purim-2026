@@ -60,3 +60,47 @@ body {
 .entity-card a:hover {
   text-decoration: underline;
 }
+
+/* mřížka obrázků – 3 sloupce, reaguje na šířku */
+.images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.images-grid img {
+  flex: 1 1 30%;     /* cca 3 sloupce */
+  min-width: 120px;
+  max-width: 100%;
+  border-radius: 8px;
+  height: auto;
+}
+
+/* na velmi malých obrazovkách jen 1–2 sloupce */
+@media (max-width: 600px) {
+  .images-grid img {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 400px) {
+  .images-grid img {
+    flex: 1 1 100%;
+  }
+}
+/* omezení šířky stránky na velkých obrazovkách */
+body {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* lepší typografie na mobilech */
+h1 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.2rem;
+}
