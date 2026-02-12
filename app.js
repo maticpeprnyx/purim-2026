@@ -1,10 +1,16 @@
 // js/app.js
 
 function renderEntities() {
+  function renderEntities() {
   const container = document.getElementById("entities-container");
   if (!container || !Array.isArray(entities)) return;
 
-  entities.forEach(entity => {
+  // seřadit entitiy podle jména (case-insensitive, česky-friendly)
+  const sorted = [...entities].sort((a, b) =>
+    (a.name || "").localeCompare(b.name || "", "cs", { sensitivity: "base" })
+  );
+
+  sorted.forEach(entity => {
     const card = document.createElement("div");
     card.className = "entity-card";
 
