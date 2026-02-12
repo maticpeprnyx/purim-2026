@@ -68,7 +68,7 @@ const entities = [
             {
                 url: "https://www.partiescostume.com/wp-content/uploads/2015/11/Daft-Punk-Halloween-Costumes.jpg",
                 alt: "Možné pojetí kostýmu"
-            },
+            }
         ],
         performanceUrl: "https://youtu.be/BMC8nTo5oJo?si=IMrjuO5X5ZOX2l3X",
         musicUrl: "https://youtu.be/gAjR4_CbPpQ?si=7bkJ3CIOv121N_D8",
