@@ -70,7 +70,8 @@ body {
 }
 
 .images-grid img {
-  flex: 1 1 30%;     /* cca 3 sloupce */
+  flex: 1 1 30%;
+  /* cca 3 sloupce */
   min-width: 120px;
   max-width: 100%;
   border-radius: 8px;
@@ -89,6 +90,7 @@ body {
     flex: 1 1 100%;
   }
 }
+
 /* omezení šířky stránky na velkých obrazovkách */
 body {
   max-width: 900px;
@@ -103,4 +105,27 @@ h1 {
 
 h2 {
   font-size: 1.2rem;
+}
+
+
+#filter-buttons {
+  margin: 1rem 0;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: #0055aa;
+  color: white;
+  border-color: #0055aa;
 }
