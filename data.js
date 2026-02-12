@@ -3,8 +3,8 @@ const entities = [
         name: "Ozzy Osbourne",
         label: "Zpěvák metalové skupiny Black Sabbath",
         category: [
-            "skupina",
-            "solo"
+            "uskupení",
+            "sólo"
         ],
         images: [
             {
@@ -30,7 +30,7 @@ const entities = [
     {
         name: "Jana Kratochvílová",
         label: "Česká textařka a zpěvačka původně spojená s Kroky Františka Janečka, která ale zaznamenala i po revoluci úspěšnou sólo dráhu",
-        category: "solo",
+        category: "sólo",
         images: [
             {
                 url: "https://www.play.cz/wp-content/uploads/2023/01/Jana-Uriel-Kratochvilova.jpg",
@@ -55,7 +55,7 @@ const entities = [
     {
         name: "Daft Punk",
         label: "Elektronické duo z Francie",
-        category: "skupina",
+        category: "uskupení",
         images: [
             {
                 url: "https://static01.nyt.com/images/2021/02/23/arts/22daftpunk/merlin_68436082_cbc2d16f-e4ce-4e8e-9f06-d2789c9f309b-superJumbo.jpg",

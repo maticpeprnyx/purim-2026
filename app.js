@@ -2,20 +2,16 @@ let currentFilter = 'all';
 
 function renderEntities(filteredEntities = entities) {
   const container = document.getElementById("entities-container");
-  if (!container) return;
-
-  // vymaž staré karty
   container.innerHTML = "";
 
-  // seřaď a renderuj
   const sorted = [...filteredEntities].sort((a, b) =>
     (a.name || "").localeCompare(b.name || "", "cs", { sensitivity: "base" })
   );
 
   sorted.forEach((entity) => {
-    // ... stejný kód pro vytvoření card jako dřív, BEZ category span ...
-    
-    // hlavička (bez category!)
+    const card = document.createElement("div");
+    card.className = "entity-card";
+
     const title = document.createElement("h2");
     title.textContent = entity.name || "";
     card.appendChild(title);
@@ -25,38 +21,54 @@ function renderEntities(filteredEntities = entities) {
     labelEl.textContent = entity.label || "";
     card.appendChild(labelEl);
 
-    // ... zbytek kódu (obrázky, odkazy, komentář) beze změny ...
+    // obrázky
+    if (Array.isArray(entity.images) && entity.images.length) {
+      const imagesGrid = document.createElement("div");
+      imagesGrid.className = "images-grid";
+      entity.images.forEach((img) => {
+        const imgEl = document.createElement("img");
+        imgEl.src = img.url;
+        imgEl.alt = img.alt || "";
+        imagesGrid.appendChild(imgEl);
+      });
+      card.appendChild(imagesGrid);
+    }
+
+    // odkazy
+    const linksP = document.createElement("p");
+    if (entity.performanceUrl) {
+      const perfLink = document.createElement("a");
+      perfLink.href = entity.performanceUrl;
+      perfLink.target = "_blank";
+      perfLink.rel = "noopener noreferrer";
+      perfLink.textContent = "Ukázka z vystoupení";
+      linksP.appendChild(perfLink);
+    }
+    if (entity.musicUrl) {
+      if (linksP.children.length) linksP.append(" ");
+      const musicLink = document.createElement("a");
+      musicLink.href = entity.musicUrl;
+      musicLink.target = "_blank";
+      musicLink.rel = "noopener noreferrer";
+      musicLink.textContent = "Ukázka z hudební tvorby";
+      linksP.appendChild(musicLink);
+    }
+    if (linksP.children.length) card.appendChild(linksP);
+
+    // komentář
+    if (entity.comment?.content) {
+      const comment = document.createElement("div");
+      comment.className = "comment";
+      comment.innerHTML = `<strong>${entity.comment.author}</strong> ${entity.comment.content}`;
+      card.appendChild(comment);
+    }
 
     container.appendChild(card);
   });
 }
 
-// filtr handler
-function setFilter(category) {
-  currentFilter = category;
-  
-  // aktualizuj tlačítka
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.category === category);
-  });
-
-  // filtruj data
-  let filtered;
-  if (category === 'all') {
-    filtered = entities;
-  } else {
-    filtered = entities.filter(entity => 
-      entity.category === category || 
-      (Array.isArray(entity.category) && entity.category.includes(category))
-    );
-  }
-
-  renderEntities(filtered);
-}
-
-// inicializace
 document.addEventListener('DOMContentLoaded', () => {
-  // vytvoř dynamická tlačítka z kategorií v datech
+  // tlačítka
   const categories = [...new Set(entities.flatMap(e => 
     Array.isArray(e.category) ? e.category : [e.category]
   ).filter(Boolean))];
@@ -72,8 +84,22 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.onclick = () => setFilter(cat);
     filterDiv.appendChild(btn);
   });
-
-  document.querySelector('[data-category="all"]').onclick = () => setFilter('all');
   
+  document.querySelector('[data-category="all"]').onclick = () => setFilter('all');
   renderEntities();
 });
+
+function setFilter(category) {
+  currentFilter = category;
+  document.querySelectorAll('.filter-btn').forEach(btn => 
+    btn.classList.toggle('active', btn.dataset.category === category)
+  );
+  
+  let filtered = category === 'all' ? entities : 
+    entities.filter(entity => 
+      entity.category === category || 
+      (Array.isArray(entity.category) && entity.category.includes(category))
+    );
+  
+  renderEntities(filtered);
+}
