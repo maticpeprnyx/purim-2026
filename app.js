@@ -1,77 +1,87 @@
-// js/app.js
-
 function renderEntities() {
-  function renderEntities() {
   const container = document.getElementById("entities-container");
   if (!container || !Array.isArray(entities)) return;
 
-  // seřadit entitiy podle jména (case-insensitive, česky-friendly)
+  // seřadit podle jména
   const sorted = [...entities].sort((a, b) =>
     (a.name || "").localeCompare(b.name || "", "cs", { sensitivity: "base" })
   );
 
-  sorted.forEach(entity => {
+  sorted.forEach((entity) => {
     const card = document.createElement("div");
     card.className = "entity-card";
 
     // hlavička
-    const categoryText = Array.isArray(entity.category)
-      ? entity.category.join(", ")
-      : entity.category || "";
+    const title = document.createElement("h2");
+    title.textContent = entity.name || "";
+    card.appendChild(title);
 
-    card.innerHTML = `
-      <h2>${entity.name}</h2>
-      <span class="label">${entity.label}</span>
-      ${
-        categoryText
-          ? `<span class="category">Kategorie: ${categoryText}</span>`
-          : ""
-      }
-    `;
+    const labelEl = document.createElement("span");
+    labelEl.className = "label";
+    labelEl.textContent = entity.label || "";
+    card.appendChild(labelEl);
 
-    // mřížka obrázků
-    if (Array.isArray(entity.images) && entity.images.length > 0) {
+    const categoryEl = document.createElement("span");
+    categoryEl.className = "category";
+    categoryEl.textContent = entity.category || "";
+    card.appendChild(categoryEl);
+
+    // obrázky – tři do řádku, flex-wrap
+    if (Array.isArray(entity.images) && entity.images.length) {
       const imagesGrid = document.createElement("div");
       imagesGrid.className = "images-grid";
 
-      entity.images.forEach(img => {
-        if (!img || !img.url) return;
+      entity.images.forEach((img) => {
         const imgEl = document.createElement("img");
         imgEl.src = img.url;
-        imgEl.alt = img.alt || entity.name;
+        imgEl.alt = img.alt || "";
         imagesGrid.appendChild(imgEl);
       });
 
       card.appendChild(imagesGrid);
     }
 
-    // odkazy (performance + music)
-    const links = document.createElement("p");
-    links.innerHTML = `
-      ${
-        entity.performanceUrl
-          ? `<a href="${entity.performanceUrl}" target="_blank" rel="noopener noreferrer">Ukázka z vystoupení</a>`
-          : ""
-      }
-      ${
-        entity.performanceUrl && entity.musicUrl ? " | " : ""
-      }
-      ${
-        entity.musicUrl
-          ? `<a href="${entity.musicUrl}" target="_blank" rel="noopener noreferrer">Ukázka z hudební tvorby</a>`
-          : ""
-      }
-    `;
-    card.appendChild(links);
+    // odkazy
+    const linksP = document.createElement("p");
 
-    // komentář (volitelný)
+    if (entity.performanceUrl) {
+      const perfLink = document.createElement("a");
+      perfLink.href = entity.performanceUrl;
+      perfLink.target = "_blank";
+      perfLink.rel = "noopener noreferrer";
+      perfLink.textContent = "Ukázka z vystoupení";
+      linksP.appendChild(perfLink);
+    }
+
+    if (entity.musicUrl) {
+      if (linksP.childNodes.length) {
+        linksP.append(" ");
+      }
+      const musicLink = document.createElement("a");
+      musicLink.href = entity.musicUrl;
+      musicLink.target = "_blank";
+      musicLink.rel = "noopener noreferrer";
+      musicLink.textContent = "Ukázka z hudební tvorby";
+      linksP.appendChild(musicLink);
+    }
+
+    if (linksP.childNodes.length) {
+      card.appendChild(linksP);
+    }
+
+    // komentář – volitelný
     if (entity.comment && entity.comment.content) {
       const comment = document.createElement("div");
       comment.className = "comment";
-      comment.innerHTML = `
-        <strong>${entity.comment.author || "Komentář"}:</strong>
-        <span>${entity.comment.content}</span>
-      `;
+
+      const author = document.createElement("strong");
+      author.textContent = entity.comment.author || "";
+      comment.appendChild(author);
+
+      const text = document.createElement("span");
+      text.textContent = " " + entity.comment.content;
+      comment.appendChild(text);
+
       card.appendChild(comment);
     }
 
