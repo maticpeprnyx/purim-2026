@@ -77,7 +77,9 @@ const entities = [
             content: "Ideální volba pro ty, kteří chtějí schovat obličej a zároveň se vydávat za rozpoznatelné hudebníky. Daft Punk v rámci elektronické hudby klasika a vzhledem k tomu, že se rozhodli ukončit kariéru teprv před třemi lety, jejich hudbu znají i mladší ročníky. Navíc mají velmi odmítavý postoj k umělé inteligenci, což by podle mých zkušeností mohlo mezi studenty rezonovat."
         }
     },
-    {
+
+];
+/*  {
         name: "",
         label: "",
         category: "",
@@ -100,5 +102,4 @@ const entities = [
             author: "",
             content: ""
         }
-    }
-]
+    } */
