@@ -17,26 +17,39 @@ body {
 .images-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;  /* Smaller gap for more image space */
   margin: 1rem 0;
 }
 
 .images-grid img {
-  max-width: 200px;
-  max-height: 200px;
+  width: 100%;
+  height: auto;
+  max-height: 400px;  /* Bigger max height */
+  object-fit: cover;  /* Keeps aspect ratio nice */
 }
+
 
 .image-with-label {
   display: flex;
   flex-direction: column;
-  max-width: 200px;
+  flex: 1 1 calc(33.33% - 1rem);  /* ~1/3 width minus gap, flex-grow/shrink */
+  max-width: 300px;  /* Bigger than before */
 }
 
 .image-label {
   font-size: 0.85rem;
   font-style: italic;
-  margin-bottom: 0.25rem;
+  margin-top: 0.25rem;
 }
+
+/* Mobile: stack vertically */
+@media (max-width: 768px) {
+  .image-with-label {
+    flex: 1 1 100%;  /* Full width on small screens */
+    max-width: none;
+  }
+}
+
 
 #filter-buttons {
   margin: 1rem 0;
