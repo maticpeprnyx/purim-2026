@@ -30,7 +30,10 @@ const entities = [
     {
         name: "Jana Kratochvílová",
         label: "Česká textařka a zpěvačka původně spojená s Kroky Františka Janečka, která ale zaznamenala i po revoluci úspěšnou sólo dráhu",
-        category: "sólo",
+        category: [
+            "sólo",
+            "sólo premium"
+        ],
         images: [
             {
                 url: "https://www.play.cz/wp-content/uploads/2023/01/Jana-Uriel-Kratochvilova.jpg",
@@ -77,6 +80,85 @@ const entities = [
             content: "Ideální volba pro ty, kteří chtějí schovat obličej a zároveň se vydávat za rozpoznatelné hudebníky. Daft Punk v rámci elektronické hudby klasika a vzhledem k tomu, že se rozhodli ukončit kariéru teprv před třemi lety, jejich hudbu znají i mladší ročníky. Navíc mají velmi odmítavý postoj k umělé inteligenci, což by podle mých zkušeností mohlo mezi studenty rezonovat."
         }
     },
+    {
+        name: "Dorian Electra",
+        label: "Genderfluidní popová hvězda z USA",
+        category: [
+            "sólo",
+            "sólo premium"
+        ],
+        images: [
+            {
+                url: "https://outsmartmag.s3.us-east-2.amazonaws.com/wp-content/uploads/2022/01/19125802/WEB_0283Photos-by-Phillip-Soulliere-_-Hair-by-Gregg-Lennon-Jr.-_-Makeup-by-Nick-Lennon.jpg",
+                alt: "Co se týče outfitů, Dorian Electra často volí výrazná ramena, volány, lesklé materiály a kontrastní barevné kombinace"
+            },{
+                url: "https://dailyutahchronicle.com/wp-content/uploads/2022/01/Maybe-900x751.png",
+                alt: "Dorian Electra rádx experimentuje se svým vizuálem, především výrazným líčením, různými barvami vlasů a extravagantními outfity"
+            },
+            {
+                url: "https://pbs.twimg.com/media/EJBW9zTUUAAGROX.jpg",
+                alt: ""
+            }
+
+        ],
+        performanceUrl: "https://youtu.be/GRO82Ny-wXM?si=vjr9YUZlYgUHVp50&t=40",
+        musicUrl: "https://youtu.be/kk4BZ3uOSHI?si=DvgoV8vy3TmKRSi3",
+        comment: {
+            author: "Josefínin",
+            content: "Dorian Electra je jeden z mých oblíbených současných umělců. Je to vizuálně i hudebně velmi výrazná osobnost a to z ní dělá dobrou inspiraci pro purimový kostým. Zároveň zdůrazňuji, že není prostx kontroverze (témata písní, genderová identita, používání hlasových efektů)."       }
+    },
+        {
+        name: "Milion+",
+        label: "Český label sdružující několik raperů, kteří vydávají hudbu i sólově",
+        category: "uskupení",
+        images: [
+            {
+                url: "images/milion-plus-skupina.jpg",
+                alt: "Milion+"
+            },
+            {
+                url: "images/milion-plus-raper.jpg",
+                alt: "Yzomandias"
+            },
+            {
+                url: "images/milion-plus-raper2.jpg",
+                alt: "Nik Tendo"
+            },
+            {
+                url: "images/milion-plus-raper3.jpg",
+                alt: "Sara Rikas"
+            },
+            {
+                url: "images/milion-plus-raper4.jpg",
+                alt: "Robin Zoot"
+            },
+            {
+                url: "images/milion-plus-raper5.jpg",
+                alt: "Koky"
+            },
+            {
+                url: "images/milion-plus-raper6.jpg",
+                alt: "Decky"
+            },
+            {
+                url: "images/milion-plus-raper7.jpg",
+                alt: "Hasan"
+            },
+            {
+                url: "images/milion-plus-raper8.jpg",
+                alt: "Karlo"
+            },
+
+
+        ],
+        performanceUrl: "https://youtu.be/p6hlVuDJrsc?si=MsyWe12llVZ0ab3i&t=1470",
+        musicUrl: "https://youtu.be/X_AahLWk8Sw?si=51pqqkpwZIi2XXGa",
+        comment: {                  
+
+
+        }
+    }
+    
 
 ];
 /*  {
