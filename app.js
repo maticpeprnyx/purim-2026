@@ -11,9 +11,11 @@ function renderEntities(filteredEntities = entities) {
   sorted.forEach((entity) => {
     const card = document.createElement("div");
     card.className = "entity-card";
+    card.id = entity.name.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
 
     const title = document.createElement("h2");
-    title.textContent = entity.name || "";
+    title.innerHTML = `<a href="#${entity.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${entity.name || ''}</a>`;
     card.appendChild(title);
 
     const labelEl = document.createElement("span");
