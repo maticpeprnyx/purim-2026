@@ -68,7 +68,7 @@ function renderEntities(filteredEntities = entities) {
       musicLink.href = entity.musicUrl;
       musicLink.target = "_blank";
       musicLink.rel = "noopener noreferrer";
-      musicLink.textContent = "Ukázka z hudební tvorby (Youtube)";
+      musicLink.textContent = "| Ukázka z hudební tvorby (Youtube)";
       linksP.appendChild(musicLink);
     }
     if (linksP.children.length) card.appendChild(linksP);
