@@ -59,7 +59,7 @@ function renderEntities(filteredEntities = entities) {
       perfLink.href = entity.performanceUrl;
       perfLink.target = "_blank";
       perfLink.rel = "noopener noreferrer";
-      perfLink.textContent = "Ukázka z vystoupení";
+      perfLink.textContent = "Ukázka z vystoupení (Youtube)";
       linksP.appendChild(perfLink);
     }
     if (entity.musicUrl) {
@@ -68,7 +68,7 @@ function renderEntities(filteredEntities = entities) {
       musicLink.href = entity.musicUrl;
       musicLink.target = "_blank";
       musicLink.rel = "noopener noreferrer";
-      musicLink.textContent = "Ukázka z hudební tvorby";
+      musicLink.textContent = "Ukázka z hudební tvorby (Youtube)";
       linksP.appendChild(musicLink);
     }
     if (linksP.children.length) card.appendChild(linksP);
@@ -92,7 +92,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ).filter(Boolean))];
 
   const filterDiv = document.getElementById('filter-buttons');
-  filterDiv.innerHTML = '<button data-category="all" class="filter-btn active">Vše</button>';
+  filterDiv.innerHTML = '<button data-category="all" class="filter-btn active">vše</button>';
 
   categories.forEach(cat => {
     const btn = document.createElement('button');
