@@ -22,7 +22,6 @@ function renderEntities(filteredEntities = entities) {
     card.appendChild(labelEl);
 
     // obrázky
-    // obrázky
     if (Array.isArray(entity.images) && entity.images.length) {
 
       const imagesGrid = document.createElement("div");
@@ -73,12 +72,12 @@ function renderEntities(filteredEntities = entities) {
     if (linksP.children.length) card.appendChild(linksP);
 
     // komentář
-    if (entity.comment?.content) {
-      const comment = document.createElement("div");
-      comment.className = "comment";
-      comment.innerHTML = `<strong>${entity.comment.author}</strong> ${entity.comment.content}`;
-      card.appendChild(comment);
-    }
+if (entity.comment?.content) {
+  const comment = document.createElement("div");
+  comment.className = "comment";
+  comment.innerHTML = `${entity.comment.author} komentář: ${entity.comment.content}`;
+  card.appendChild(comment);
+}
 
     container.appendChild(card);
   });
