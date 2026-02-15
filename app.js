@@ -63,12 +63,12 @@ function renderEntities(filteredEntities = entities) {
       linksP.appendChild(perfLink);
     }
     if (entity.musicUrl) {
-      if (linksP.children.length) linksP.append(" ");
+      if (linksP.children.length) linksP.append(" | ");
       const musicLink = document.createElement("a");
       musicLink.href = entity.musicUrl;
       musicLink.target = "_blank";
       musicLink.rel = "noopener noreferrer";
-      musicLink.textContent = "| Ukázka z hudební tvorby (Youtube)";
+      musicLink.textContent = "Ukázka z hudební tvorby (Youtube)";
       linksP.appendChild(musicLink);
     }
     if (linksP.children.length) card.appendChild(linksP);
