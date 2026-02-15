@@ -1,112 +1,42 @@
-/* Basic page layout */
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  line-height: 1.5;
-  color: #333;
-  background-color: #fafafa;
-}
-
-/* Container for all entities (celebrities or bands) */
-.entity-card {
-  margin-bottom: 2rem;
-  border-bottom: 1px solid #eee;
-  padding-bottom: 1rem;
-}
-
-.entity-card h2 {
-  margin-top: 0;
-  margin-bottom: 0.5rem;
-  font-size: 1.4rem;
-}
-
-/* Labels like "Solo artist" or "K‑pop band" */
-.entity-card .label {
-  font-size: 0.9em;
-  color: #666;
-  display: block;
-  margin-bottom: 0.75rem;
-}
-
-/* Images for a single person or band */
-.entity-card img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  margin: 0.5rem 0;
-}
-
-/* Band members layout (multiple images in a row) */
-.entity-card .band-members {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.entity-card .band-members img {
-  max-width: 120px;
-  border-radius: 8px;
-}
-
-/* Links: performance and music */
-.entity-card a {
-  color: #0055aa;
-  text-decoration: none;
-  margin-right: 1rem;
-}
-
-.entity-card a:hover {
-  text-decoration: underline;
-}
-
-/* mřížka obrázků – 3 sloupce, reaguje na šířku */
-.images-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin: 0.5rem 0;
-}
-
-.images-grid img {
-  flex: 1 1 30%;
-  /* cca 3 sloupce */
-  min-width: 120px;
-  max-width: 100%;
-  border-radius: 8px;
-  height: auto;
-}
-
-/* na velmi malých obrazovkách jen 1–2 sloupce */
-@media (max-width: 600px) {
-  .images-grid img {
-    flex: 1 1 45%;
-  }
-}
-
-@media (max-width: 400px) {
-  .images-grid img {
-    flex: 1 1 100%;
-  }
-}
-
-/* omezení šířky stránky na velkých obrazovkách */
 body {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 1rem;
 }
 
-/* lepší typografie na mobilech */
-h1 {
-  font-size: 1.4rem;
+.entity-card {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
 }
 
-h2 {
-  font-size: 1.2rem;
+.label {
+  display: block;
 }
 
+.images-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.images-grid img {
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.image-with-label {
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.image-label {
+  font-size: 0.85rem;
+  font-style: italic;
+  margin-bottom: 0.25rem;
+}
 
 #filter-buttons {
   margin: 1rem 0;
@@ -128,4 +58,21 @@ h2 {
   background: #0055aa;
   color: white;
   border-color: #0055aa;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  margin: 1rem 0;
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

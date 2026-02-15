@@ -22,17 +22,34 @@ function renderEntities(filteredEntities = entities) {
     card.appendChild(labelEl);
 
     // obrázky
+    // obrázky
     if (Array.isArray(entity.images) && entity.images.length) {
+
       const imagesGrid = document.createElement("div");
       imagesGrid.className = "images-grid";
+
       entity.images.forEach((img) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "image-with-label";
+
         const imgEl = document.createElement("img");
         imgEl.src = img.url;
         imgEl.alt = img.alt || "";
-        imagesGrid.appendChild(imgEl);
+
+        const label = document.createElement("div");
+        label.className = "image-label";
+        label.textContent = img.alt || "";
+
+        wrapper.appendChild(imgEl);  // image first
+        wrapper.appendChild(label);  // then label below
+
+        imagesGrid.appendChild(wrapper);
       });
+
+
       card.appendChild(imagesGrid);
     }
+
 
     // odkazy
     const linksP = document.createElement("p");
@@ -69,13 +86,13 @@ function renderEntities(filteredEntities = entities) {
 
 document.addEventListener('DOMContentLoaded', () => {
   // tlačítka
-  const categories = [...new Set(entities.flatMap(e => 
+  const categories = [...new Set(entities.flatMap(e =>
     Array.isArray(e.category) ? e.category : [e.category]
   ).filter(Boolean))];
-  
+
   const filterDiv = document.getElementById('filter-buttons');
   filterDiv.innerHTML = '<button data-category="all" class="filter-btn active">Vše</button>';
-  
+
   categories.forEach(cat => {
     const btn = document.createElement('button');
     btn.dataset.category = cat;
@@ -84,22 +101,23 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.onclick = () => setFilter(cat);
     filterDiv.appendChild(btn);
   });
-  
+
   document.querySelector('[data-category="all"]').onclick = () => setFilter('all');
   renderEntities();
 });
 
+
 function setFilter(category) {
   currentFilter = category;
-  document.querySelectorAll('.filter-btn').forEach(btn => 
+  document.querySelectorAll('.filter-btn').forEach(btn =>
     btn.classList.toggle('active', btn.dataset.category === category)
   );
-  
-  let filtered = category === 'all' ? entities : 
-    entities.filter(entity => 
-      entity.category === category || 
+
+  let filtered = category === 'all' ? entities :
+    entities.filter(entity =>
+      entity.category === category ||
       (Array.isArray(entity.category) && entity.category.includes(category))
     );
-  
+
   renderEntities(filtered);
 }
