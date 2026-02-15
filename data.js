@@ -34,7 +34,7 @@ const entities = [
         images: [
             {
                 url: "https://www.play.cz/wp-content/uploads/2023/01/Jana-Uriel-Kratochvilova.jpg",
-                alt: "Jana Kratochvílová počátkem devadesátých let"
+                alt: "Jana Kratochvílová počátkem devadesátých let (srov. <a href=''>Dorian Electra</a>)"
             },
             {
                 url: "https://festival.praguepride.com/app/uploads/2025/06/foto-kratochvilova-1920x1080-c-default.jpg",
