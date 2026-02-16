@@ -159,7 +159,7 @@ const entities = [
         musicUrl: "https://youtu.be/X_AahLWk8Sw?si=51pqqkpwZIi2XXGa",
         comment: {                  
             author: "Josefínin",
-            content: "Tohle je hodně populistická volba – děcka je milujou. Zároveň ale zařazuju do sólo prémium, protože celý kostým může spočívat v podstatě v černé mikině a výhružném výrazu. Samozžejmě pokud se někdo (třeba já) ujme představování alespoň jedné ze dvou nejvýraznějších tváří labelu, viz výše. Hudba je extrémně sprostá a absolutně nevhodná pro děti, takže je to rozhodně na pováženou, zda se chceme postavit do schvalující pozice. Ale bude to sranda a bude to mít ohlas."
+            content: "Tohle je hodně populistická volba – děcka je milujou. Zároveň je zařazuju do sólo prémium, protože celý kostým může spočívat v podstatě v černé mikině a výhružném výrazu. Samozřejmě pokud se někdo (třeba já) ujme představování alespoň jedné ze dvou nejvýraznějších tváří labelu, viz výše. Hudba je extrémně sprostá a absolutně nevhodná pro děti, takže je to rozhodně na pováženou, zda se chceme postavit do schvalující pozice. Ale bude to sranda a bude to mít ohlas."
 
         }
     }
