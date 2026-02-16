@@ -117,11 +117,11 @@ const entities = [
                 alt: "Milion+"
             },
             {
-                url: "images/milion-plus-raper.jpg",
+                url: "https://media.extralife.cz/static/img/2025/07/pav-09001-690.jpg",
                 alt: "Yzomandias"
             },
             {
-                url: "images/milion-plus-raper2.jpg",
+                url: "images/milion-plus-tendo.jpg",
                 alt: "Nik Tendo"
             },
             {
