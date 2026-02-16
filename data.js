@@ -1,7 +1,7 @@
 const entities = [
     {
         name: "Ozzy Osbourne",
-        label: "Zpěvák metalové skupiny Black Sabbath",
+        sumUp: "Zpěvák metalové skupiny Black Sabbath",
         category: [
             "uskupení",
             "sólo"
@@ -29,7 +29,7 @@ const entities = [
     },
     {
         name: "Jana Kratochvílová",
-        label: "Česká textařka a zpěvačka původně spojená s Kroky Františka Janečka, která ale zaznamenala i po revoluci úspěšnou sólo dráhu",
+        sumUp: "Česká textařka a zpěvačka původně spojená s Kroky Františka Janečka, která ale zaznamenala i po revoluci úspěšnou sólo dráhu",
         category: [
             "sólo",
             "sólo premium"
@@ -37,7 +37,8 @@ const entities = [
         images: [
             {
                 url: "https://www.play.cz/wp-content/uploads/2023/01/Jana-Uriel-Kratochvilova.jpg",
-                alt: "Jana Kratochvílová počátkem devadesátých let (srov. <a href=''>Dorian Electra</a>)"
+                alt: "Jana Kratochvílová počátkem devadesátých let (srov. <a href=''>Dorian Electra</a>)",
+                linkTo: "dorian-electra"
             },
             {
                 url: "https://festival.praguepride.com/app/uploads/2025/06/foto-kratochvilova-1920x1080-c-default.jpg",
@@ -57,7 +58,7 @@ const entities = [
     },
     {
         name: "Daft Punk",
-        label: "Elektronické duo z Francie",
+        sumUp: "Elektronické duo z Francie",
         category: "uskupení",
         images: [
             {
@@ -82,7 +83,7 @@ const entities = [
     },
     {
         name: "Dorian Electra",
-        label: "Genderfluidní popová hvězda z USA",
+        sumUp: "Genderfluidní popová hvězda z USA",
         category: [
             "sólo",
             "sólo premium"
@@ -109,7 +110,7 @@ const entities = [
     },
         {
         name: "Milion+",
-        label: "Český label sdružující několik raperů, kteří vydávají hudbu i sólově",
+        sumUp: "Český label sdružující několik raperů, kteří vydávají hudbu i sólově",
         category: "uskupení",
         images: [
             {
@@ -163,7 +164,7 @@ const entities = [
 ];
 /*  {
         name: "",
-        label: "",
+        sumUp: "",
         category: "",
         images: [
             {
