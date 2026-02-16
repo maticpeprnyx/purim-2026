@@ -24,7 +24,7 @@ const entities = [
         musicUrl: "https://youtu.be/PrZFscfJxXc?si=4bGmJD0c0FjfdHQq",
         comment: {
             author: "Josefínin",
-            content: "Relevantní pochopitelně spíše pro starší generace. Kontroverzní postava kvůli drogám a obecně životnímu stylu, ale významná osobnost pro metal, ale i rockovou muziku vůbec. Mezi sólo prémium je Ozzy zařazen kvůli možnosti vydávat se za celý Black Sabbath, na jejichž má dle mého rozhodně cenu upozorňovat."
+            content: "Relevantní pochopitelně spíše pro starší generace. Kontroverzní postava kvůli drogám a obecně životnímu stylu, ale významná osobnost pro metal, ale i rockovou muziku vůbec. Mezi sólo prémium je Ozzy zařazen kvůli možnosti vydávat se za celý Black Sabbath, na jejichž muziku má dle mého rozhodně cenu upozorňovat."
         }
     },
     {
