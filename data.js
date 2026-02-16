@@ -32,7 +32,7 @@ const entities = [
         sumUp: "Česká textařka a zpěvačka původně spojená s Kroky Františka Janečka, která ale zaznamenala i po revoluci úspěšnou sólo dráhu",
         category: [
             "sólo",
-            "sólo premium"
+            "sólo prémium"
         ],
         images: [
             {
@@ -78,7 +78,7 @@ const entities = [
         musicUrl: "https://youtu.be/gAjR4_CbPpQ?si=7bkJ3CIOv121N_D8",
         comment: {
             author: "Josefínin",
-            content: "Ideální volba pro ty, kteří chtějí schovat obličej a zároveň se vydávat za rozpoznatelné hudebníky. Daft Punk v rámci elektronické hudby klasika a vzhledem k tomu, že se rozhodli ukončit kariéru teprv před třemi lety, jejich hudbu znají i mladší ročníky. Navíc mají velmi odmítavý postoj k umělé inteligenci, což by podle mých zkušeností mohlo mezi studenty rezonovat."
+            content: "Ideální volba pro ty, kteří chtějí schovat obličej a zároveň se vydávat za rozpoznatelné hudebníky. Daft Punk jsou v rámci elektronické hudby klasika a vzhledem k tomu, že se rozhodli ukončit kariéru teprv před třemi lety, jejich hudbu znají i mladší ročníky. Navíc mají velmi odmítavý postoj k umělé inteligenci, což by podle mých zkušeností mohlo mezi studenty rezonovat."
         }
     },
     {
@@ -86,7 +86,7 @@ const entities = [
         sumUp: "Genderfluidní popová hvězda z USA",
         category: [
             "sólo",
-            "sólo premium"
+            "sólo prémium"
         ],
         images: [
             {
