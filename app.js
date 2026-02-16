@@ -18,10 +18,10 @@ function renderEntities(filteredEntities = entities) {
     title.innerHTML = `<a href="#${entity.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}">${entity.name || ''}</a>`;
     card.appendChild(title);
 
-    const labelEl = document.createElement("span");
-    labelEl.className = "label";
-    labelEl.textContent = entity.label || "";
-    card.appendChild(labelEl);
+    const label = document.createElement("span");
+    label.className = "sum-up";
+    label.textContent = entity.sumUp || "";
+    card.appendChild(label);
 
     // obrázky
     if (Array.isArray(entity.images) && entity.images.length) {
@@ -37,9 +37,13 @@ function renderEntities(filteredEntities = entities) {
         imgEl.src = img.url;
         imgEl.alt = img.alt || "";
 
-        const label = document.createElement("div");
+        const label = document.createElement(img.linkTo ? "a" : "div");
         label.className = "image-label";
+        if (img.linkTo) {
+          label.href = `#${img.linkTo}`;
+        }
         label.textContent = img.alt || "";
+
 
         wrapper.appendChild(imgEl);  // image first
         wrapper.appendChild(label);  // then label below

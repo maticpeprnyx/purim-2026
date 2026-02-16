@@ -3,8 +3,8 @@ const entities = [
         name: "Ozzy Osbourne",
         sumUp: "Zpěvák metalové skupiny Black Sabbath",
         category: [
-            "uskupení",
-            "sólo"
+            "sólo",
+            "sólo prémium"
         ],
         images: [
             {
@@ -24,7 +24,7 @@ const entities = [
         musicUrl: "https://youtu.be/PrZFscfJxXc?si=4bGmJD0c0FjfdHQq",
         comment: {
             author: "Josefínin",
-            content: "Relevantní pochopitelně spíše pro starší generace. Kontroverzní postava kvůli drogám a obecně životnímu stylu, ale významná osobnost pro metal, ale i rockovou muziku vůbec. Na hudbu Black Sabbath má cenu upozorňovat."
+            content: "Relevantní pochopitelně spíše pro starší generace. Kontroverzní postava kvůli drogám a obecně životnímu stylu, ale významná osobnost pro metal, ale i rockovou muziku vůbec. Mezi sólo prémium je Ozzy zařazen kvůli možnosti vydávat se za celý Black Sabbath, na jejichž má dle mého rozhodně cenu upozorňovat."
         }
     },
     {
@@ -37,7 +37,7 @@ const entities = [
         images: [
             {
                 url: "https://www.play.cz/wp-content/uploads/2023/01/Jana-Uriel-Kratochvilova.jpg",
-                alt: "Jana Kratochvílová počátkem devadesátých let (srov. <a href=''>Dorian Electra</a>)",
+                alt: "Jana Kratochvílová počátkem devadesátých let (srov. Dorian Electra 🖱️)",
                 linkTo: "dorian-electra"
             },
             {
@@ -111,7 +111,10 @@ const entities = [
         {
         name: "Milion+",
         sumUp: "Český label sdružující několik raperů, kteří vydávají hudbu i sólově",
-        category: "uskupení",
+        category: [
+            "uskupení",
+            "sólo prémium",
+        ],
         images: [
             {
                 url: "images/milion-plus-skupina.jpg",
@@ -125,6 +128,7 @@ const entities = [
                 url: "images/milion-plus-tendo.jpg",
                 alt: "Nik Tendo"
             },
+            /*
             {
                 url: "images/milion-plus-raper3.jpg",
                 alt: "Sara Rikas"
@@ -149,13 +153,13 @@ const entities = [
                 url: "images/milion-plus-raper8.jpg",
                 alt: "Karlo"
             },
-
-
+            */
         ],
         performanceUrl: "https://youtu.be/p6hlVuDJrsc?si=MsyWe12llVZ0ab3i&t=1470",
         musicUrl: "https://youtu.be/X_AahLWk8Sw?si=51pqqkpwZIi2XXGa",
         comment: {                  
-
+            author: "Josefínin",
+            content: "Tohle je hodně populistická volba – děcka je milujou. Zároveň ale zařazuju do sólo prémium, protože celý kostým může spočívat v podstatě v černé mikině a výhružném výrazu. Samozžejmě pokud se někdo (třeba já) ujme představování alespoň jedné ze dvou nejvýraznějších tváří labelu, viz výše. Hudba je extrémně sprostá a absolutně nevhodná pro děti, takže je to rozhodně na pováženou, zda se chceme postavit do schvalující pozice. Ale bude to sranda a bude to mít ohlas."
 
         }
     }
