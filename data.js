@@ -162,10 +162,7 @@ const entities = [
             content: "Tohle je hodně populistická volba – děcka je milujou. Zároveň je zařazuju do sólo prémium, protože celý kostým může spočívat v podstatě v černé mikině a výhružném výrazu. Samozřejmě pokud se někdo (třeba já) ujme představování alespoň jedné ze dvou nejvýraznějších tváří labelu, viz výše. Hudba je extrémně sprostá a absolutně nevhodná pro děti, takže je to rozhodně na pováženou, zda se chceme postavit do schvalující pozice. Ale bude to sranda a bude to mít ohlas."
 
         }
-    }
-    
-
-];
+    },
  {
         name: "Kapitán Demo",
         sumUp: "Projekt producenta Jiřího Buriana, skrz který paroduje postavy z české hudební scény",
@@ -190,6 +187,7 @@ const entities = [
             content: "Pokud se chcete za svůj kostým co nejvíc schovat a zároveň se necítíte na to při tom rozšiřovat žactvu a studentstvu obzory, Demo Crew je ideální volba. Garantuju, že velká většina osazenstva zná alespoň Zlatíčka. Je to trochu zaprodanec, ale každopádně dělá vlny."
         }
     }, 
+    ];
 /*  {
         name: "",
         sumUp: "",
