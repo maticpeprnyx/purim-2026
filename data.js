@@ -166,6 +166,30 @@ const entities = [
     
 
 ];
+ {
+        name: "Kapitán Demo",
+        sumUp: "Projekt producenta Jiřího Buriana, skrz který paroduje postavy z české hudební scény",
+        category: "sólo prémium",
+        images: [
+            {
+                url: "https://www.ireport.cz/files/53_1006391_94196.jpg",
+                alt: "Vizuál Kapitána Dema definují oblé tvary a často také bílý makeup na obličeji"
+            },
+            {
+                url: "https://www.ireport.cz/files/51_1012098_213155.jpg",
+                alt: "Kapitán Demo má svou rapovou crew, která ho na vystoupeních doprovází – jejich umělecká jména jsou Givi Kros a ProGram"
+            },{
+                url: "https://protisedi.cz/wp-content/uploads/2018/10/unnamed-5.jpg",
+                alt: "Co se týče módních kreací, Kapitán Demo nejde pro inspiraci daleko a nebojí si ze sebe udělat legraci"
+            }
+        ],
+        performanceUrl: "https://youtu.be/77XVNGMTUdE?si=2dfcoxjdgun0vr25",
+        musicUrl: "https://youtu.be/RxZxBuVo53o?si=ng9SOyran9CFg3vV",
+        comment: {
+            author: "Josefínin",
+            content: "Pokud se chcete za svůj kostým co nejvíc schovat a zároveň se necítíte na to při tom rozšiřovat žactvu a studentstvu obzory, Demo Crew je ideální volba. Garantuju, že velká většina osazenstva zná alespoň Zlatíčka. Je to trochu zaprodanec, ale každopádně dělá vlny."
+        }
+    }, 
 /*  {
         name: "",
         sumUp: "",
